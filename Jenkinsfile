@@ -24,7 +24,7 @@ pipeline {
                 }
             }
         }
-        stage('Push image to Hub') {
+       stage('Push image to Hub') {
             steps {
                 script {
                     withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
@@ -32,7 +32,8 @@ pipeline {
                         sh 'docker push 9356853992/devops-integration'
                     }
                 }
-        }
+            }
+        } 
         stage('EKS Creation') {
             steps {
                 script {
