@@ -32,7 +32,6 @@ pipeline {
                         sh 'docker push 9356853992/devops-integration'
                     }
                 }
-                }
         }
         stage('EKS Creation') {
             steps {
