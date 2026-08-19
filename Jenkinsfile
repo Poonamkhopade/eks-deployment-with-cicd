@@ -34,7 +34,6 @@ pipeline {
                 }
                 }
             }
-        }
         stage('EKS Creation') {
             steps {
                 script {
